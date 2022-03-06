@@ -1,0 +1,27 @@
+NAME
+
+    Mojo::Pgofer - Interface to Mojo::Pg.
+
+VERSION
+
+    0.01_1
+
+SOURCE REPOSITORY
+
+    http://github.com/keenlinks/Mojo-Pgofer
+
+AUTHOR
+
+    Scott Kiehn <sk.keenlinks@gmail.com>
+
+COPYRIGHT
+
+    Copyright 2022 - Scott Kiehn
+
+LICENSE
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+SEE ALSO
+

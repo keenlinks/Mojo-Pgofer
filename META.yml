@@ -1,0 +1,29 @@
+---
+abstract: 'Interface to Mojo::Pg.'
+author:
+  - 'Scott Kiehn <sk.keenlinks@gmail.com>'
+build_requires:
+  Test::Exception: '0.43'
+  Test::More: '1.302075'
+configure_requires:
+  Module::Build::Tiny: '0.039'
+dynamic_config: 0
+generated_by: 'App::ModuleBuildTiny version 0.029, CPAN::Meta::Converter version 2.150010'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Mojo-Pgofer
+provides:
+  Mojo::Pgofer:
+    file: lib/Mojo/Pgofer.pm
+    version: 0.01_1
+  Mojo::Pgofer::Set:
+    file: lib/Mojo/Pgofer/Set.pm
+    version: 0.01_1
+requires:
+  Mojolicious: '6.00'
+  perl: '5.008001'
+version: 0.01_1
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
+x_spdx_expression: 'Artistic-1.0-Perl OR GPL-1.0-or-later'

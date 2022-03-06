@@ -1,0 +1,54 @@
+{
+   "abstract" : "Interface to Mojo::Pg.",
+   "author" : [
+      "Scott Kiehn <sk.keenlinks@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "App::ModuleBuildTiny version 0.029",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Mojo-Pgofer",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.039"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "App::ModuleBuildTiny" : "0.029"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Mojolicious" : "6.00",
+            "perl" : "5.008001"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::Exception" : "0.43",
+            "Test::More" : "1.302075"
+         }
+      }
+   },
+   "provides" : {
+      "Mojo::Pgofer" : {
+         "file" : "lib/Mojo/Pgofer.pm",
+         "version" : "0.01_1"
+      },
+      "Mojo::Pgofer::Set" : {
+         "file" : "lib/Mojo/Pgofer/Set.pm",
+         "version" : "0.01_1"
+      }
+   },
+   "release_status" : "testing",
+   "version" : "0.01_1",
+   "x_serialization_backend" : "JSON::PP version 4.06",
+   "x_spdx_expression" : "Artistic-1.0-Perl OR GPL-1.0-or-later"
+}
