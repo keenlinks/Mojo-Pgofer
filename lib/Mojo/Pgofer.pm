@@ -4,14 +4,14 @@ use Mojo::Base -base;
 use Mojo::Loader qw(find_modules load_class);
 use Mojo::Pg;
 
-our $VERSION = '0.01_1';
+our $VERSION = '0.01_2';
 
 has 'connection';
-has 'modules';
+has 'classname';
 has pg => sub {Mojo::Pg->new($_[0]->connection)};
 
 sub load {
-  for my $module (find_modules $_[0]->modules) {
+  for my $module (find_modules $_[0]->classname) {
     load_class $module;
     has _has($module) => sub {state $mod = $module->new(pg => $_[0]->pg)};
   }
