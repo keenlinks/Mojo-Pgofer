@@ -1,4 +1,4 @@
-package Mojo::Pgofer::Set;
+package Mojo::Pgofer::Dataset;
 
 use Mojo::Base -base;
 use Mojo::Loader qw(data_section);

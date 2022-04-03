@@ -18,8 +18,8 @@ provides:
   Mojo::Pgofer:
     file: lib/Mojo/Pgofer.pm
     version: 0.01_2
-  Mojo::Pgofer::Set:
-    file: lib/Mojo/Pgofer/Set.pm
+  Mojo::Pgofer::Dataset:
+    file: lib/Mojo/Pgofer/Dataset.pm
     version: 0.01_2
 requires:
   Mojolicious: '6.00'

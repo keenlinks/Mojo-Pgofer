@@ -1,5 +1,8 @@
 Revision history for Perl module Mojo-Pgofer
 
+0.01_3 2022-03-05
+  - Rename Pgofer::Set to Pgofer::Dataset
+
 0.01_2 2022-03-05
   - Revise "modules" to "classname" attribute name
 
