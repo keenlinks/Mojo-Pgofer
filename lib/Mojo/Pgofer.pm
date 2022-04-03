@@ -4,7 +4,7 @@ use Mojo::Base -base;
 use Mojo::Loader qw(find_modules load_class);
 use Mojo::Pg;
 
-our $VERSION = '0.01_2';
+our $VERSION = '0.01_3';
 
 has 'connection';
 has 'classname';

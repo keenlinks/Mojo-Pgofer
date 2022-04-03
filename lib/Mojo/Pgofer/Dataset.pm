@@ -4,7 +4,7 @@ use Mojo::Base -base;
 use Mojo::Loader qw(data_section);
 use Mojo::Util qw(monkey_patch);
 
-our $VERSION = '0.01_2';
+our $VERSION = '0.01_3';
 
 has 'pg';
 

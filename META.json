@@ -40,15 +40,15 @@
    "provides" : {
       "Mojo::Pgofer" : {
          "file" : "lib/Mojo/Pgofer.pm",
-         "version" : "0.01_2"
+         "version" : "0.01_3"
       },
       "Mojo::Pgofer::Dataset" : {
          "file" : "lib/Mojo/Pgofer/Dataset.pm",
-         "version" : "0.01_2"
+         "version" : "0.01_3"
       }
    },
    "release_status" : "testing",
-   "version" : "0.01_2",
+   "version" : "0.01_3",
    "x_serialization_backend" : "JSON::PP version 4.06",
    "x_spdx_expression" : "Artistic-1.0-Perl OR GPL-1.0-or-later"
 }
