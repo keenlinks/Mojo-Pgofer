@@ -4,20 +4,22 @@ use Mojo::Base -base;
 use Mojo::Loader qw(find_modules load_class);
 use Mojo::Pg;
 
-our $VERSION = '0.01_3';
+our $VERSION = '0.01_4';
 
 has 'connection';
 has 'classname';
 has pg => sub {Mojo::Pg->new($_[0]->connection)};
 
 sub load {
+  my $pg = $_[0]->pg;
   for my $module (find_modules $_[0]->classname) {
     load_class $module;
-    has _has($module) => sub {state $mod = $module->new(pg => $_[0]->pg)};
+    my $attr = _attr($module);
+    $_[0]->attr($attr => sub {$module->new(db => $pg->db)});
   }
 }
 
-sub _has {lc substr $_[0], (rindex $_[0], '::') + 2}
+sub _attr {lc substr $_[0], (rindex $_[0], '::') + 2}
 
 1;
 __END__
@@ -30,7 +32,7 @@ Mojo::Pgofer - Interface to Mojo::Pg.
 
 =head1 VERSION
 
-0.01_1
+0.01_4
 
 =head1 SOURCE REPOSITORY
 

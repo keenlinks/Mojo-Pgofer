@@ -4,16 +4,16 @@ use Mojo::Base -base;
 use Mojo::Loader qw(data_section);
 use Mojo::Util qw(monkey_patch);
 
-our $VERSION = '0.01_3';
+our $VERSION = '0.01_4';
 
-has 'pg';
+has 'db';
 
 sub AUTOLOAD {
   our $AUTOLOAD;
   my $self = shift;
   my ($class, $sub) = $self->_call($AUTOLOAD);
   my $sql = join ' ', split '\n', data_section $class, $sub;
-  monkey_patch $class, $sub => sub {shift->pg->db->query($sql, @_)};
+  monkey_patch $class, $sub => sub {shift->db->query($sql, @_)};
   $self->$sub(@_);
 }
 
@@ -29,11 +29,11 @@ __END__
 
 =head1 NAME
 
-Mojo::Pgofer::Set - Interface to Mojo::Pg.
+Mojo::Pgofer::Dataset - Interface to Mojo::Pg.
 
 =head1 VERSION
 
-0.01_1
+0.01_4
 
 =head1 SOURCE REPOSITORY
 
