@@ -1,5 +1,8 @@
 Revision history for Perl module Mojo-Pgofer
 
+0.01_5 2022-06-08
+  - Datasets passed Mojo::Pg::Database created bug, rollback to Mojo::Pg passed
+
 0.01_4 2022-06-07
   - Fixed bug where datasets were assigned to wrong instance
   - Changed from class function "has" to instance method "attr" fixed bug

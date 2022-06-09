@@ -4,7 +4,7 @@ use Mojo::Base -base;
 use Mojo::Loader qw(find_modules load_class);
 use Mojo::Pg;
 
-our $VERSION = '0.01_4';
+our $VERSION = '0.01_5';
 
 has 'connection';
 has 'classname';
@@ -15,7 +15,7 @@ sub load {
   for my $module (find_modules $_[0]->classname) {
     load_class $module;
     my $attr = _attr($module);
-    $_[0]->attr($attr => sub {$module->new(db => $pg->db)});
+    $_[0]->attr($attr => sub {$module->new(pg => $pg)});
   }
 }
 
@@ -32,7 +32,7 @@ Mojo::Pgofer - Interface to Mojo::Pg.
 
 =head1 VERSION
 
-0.01_4
+0.01_5
 
 =head1 SOURCE REPOSITORY
 
